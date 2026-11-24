@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>조이의 한글 여행</title>
+<meta name="theme-color" content="#FFF6FB">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="한글 여행">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="splash" class="screen on">
+  <div id="splashTori"></div>
+  <h1>조이의 한글 여행</h1>
+  <p>소리 숲에서 이야기 섬까지, 26걸음</p>
+  <button id="startBtn" class="big-btn">시작하기 ▶</button>
+</section>
+
+<section id="map" class="screen">
+  <div class="topbar">
+    <div class="title"><span id="mapTori"></span>조이의 한글 여행</div>
+    <div class="chip">⭐ <span id="starCount">0</span></div>
+    <button id="bookBtn" class="chip" aria-label="스티커 책">🎒</button>
+    <button id="parentBtn" class="chip" aria-label="부모님">👨‍👩‍👧</button>
+  </div>
+  <div id="mapScroll">
+    <div class="today">
+      <button id="goBtn" class="go"><span><span class="lbl">오늘의 걸음</span><br><span class="nm" id="todayName"></span><br><span class="lbl" id="todayGoal"></span></span><span class="play">▶</span></button>
+      <button id="revBtn" class="rev">🔁 복습 놀이<small>헷갈린 글자 먼저</small></button>
+    </div>
+    <div id="stages"></div>
+  </div>
+</section>
+
+<section id="lesson" class="screen">
+  <div class="lbar">
+    <button id="quitBtn" class="icon-btn" aria-label="지도로">✕</button>
+    <div class="prog" id="prog"><i></i></div>
+    <div id="lessonTori"></div>
+  </div>
+  <div id="stage"></div>
+</section>
+
+<section id="done" class="screen"></section>
+
+<section id="parent" class="screen">
+  <div class="topbar"><div class="title">👨‍👩‍👧 부모님 화면</div><button id="pclose" class="chip">✕ 닫기</button></div>
+  <div class="tabs" id="ptabs"></div>
+  <div class="body" id="pbody"></div>
+</section>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
